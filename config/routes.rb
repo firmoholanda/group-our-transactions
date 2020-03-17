@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :users
 
   # static_pages
-  resources :static_pages
+  get '/home',    to: 'static_pages#home'
+  get '/about',   to: 'static_pages#about'
 
   # session routes
   get     '/login',   to: 'sessions#new'
