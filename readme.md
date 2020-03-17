@@ -6,12 +6,19 @@ this is my personal portfolio
 
 ## 📡 technologies used
 
+- ruby
+- rails
 - bootstrap
 - jquery
+- faker
+- bcrypt
+- will_paginate
+- rubocop
 - webpacker
+- sqlite3
 - git
 
-bootstrap, jquery, webpacker and git was used on this project.
+ruby, rails, bootstrap, jquery, faker, bcrypt, will_paginate, rubocop, webpacker, sqlite3 and git was used on this project.
 
 
 
