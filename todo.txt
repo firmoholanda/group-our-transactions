@@ -1,1 +1,21 @@
 project todo list
+
+master
+development
+
+feature-01-login
+feature-02-grouping
+feature-03-styling
+feature-04-additional-feature
+feature-05-testing
+feature-06-refactoring
+
+
+db
+
+user
+project
+group
+project_group
+
+project_task
