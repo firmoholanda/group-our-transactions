@@ -1,6 +1,6 @@
 # 📃 group-our-transactions
 
-this is my personal portfolio
+this is a ruby on rails capstone project for microverse, that groups hours spent on different projects at your university. it was made for anything that you can share with other people and group by some category.
 
 
 
