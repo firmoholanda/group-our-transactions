@@ -24,13 +24,13 @@ ruby, rails, bootstrap, jquery, faker, bcrypt, will_paginate, rubocop, webpacker
 
 ## 🚀 the project
 
-this project can be found in https://github.com/firmoholanda/firmoholanda.github.io
+this project can be found in https://github.com/firmoholanda/group-our-transactions
 
 
-### ✨ [live version](https://firmoholanda.github.io)
+### ✨ [live version](https://group-our-transactions)
 
-<a href="https://firmoholanda.github.io/" target="_blank">
-    <img alt="app image" src="https://github.com/firmoholanda/firmoholanda.github.io/blob/development/img/app-img.png"/>
+<a href="https://group-our-transactions/" target="_blank">
+    <img alt="app image" src="https://github.com/firmoholanda/group-our-transactions/blob/development/img/app-img.png"/>
 </a>
 
 
