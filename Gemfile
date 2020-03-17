@@ -25,8 +25,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'jquery-rails'
-gem "bootstrap-sass", ">= 3.4.1"
+gem 'bootstrap-sass', '>= 3.4.1'
 gem 'font-awesome-sass'
+gem 'bcrypt', '>= 3.1.13'
+gem 'faker', '1.7.3'
+gem 'will_paginate', '3.1.0'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,6 +48,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+end
+
+group :production do
+  gem 'pg', '1.1.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
