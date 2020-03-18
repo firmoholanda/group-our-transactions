@@ -20,6 +20,9 @@ $gray-medium-light: #eaeaea;
 }
 
 /* universal */
+html, body {
+  height: 100%;
+}
 
 body {
   padding-top: 60px;
