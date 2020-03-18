@@ -7,6 +7,6 @@ class Group < ApplicationRecord
   before_save { self.name = name.humanize }
   
   validates :name, presence: true, case_sensitive: false
-  validates :icon, presence: true
+  #validates :icon, presence: true
   
 end

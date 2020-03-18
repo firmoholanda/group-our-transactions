@@ -1,10 +1,10 @@
 <% provide(:title, "Projects") %>
 
-<% provide(:name, "Grouped Projects") %>
+<% provide(:name, "grouped projects") %>
 
 <div class="total container">
-  total Hours spent on projects <span class="tym"><%= current_user.projects.sum(:hours) %></span>
-  <%= @projects.size %>
+  <h2> total Hours spent on projects </h2>
+  <span class="tym"><%= current_user.projects.sum(:hours) %> </span>
 </div>
 
 <table class="project container">
@@ -12,21 +12,22 @@
     <% @projects.each do |project| %>
       <tr>
         <td class="icon">
-        <% project.groups.each do |group|  %>
-        <%= image_tag group.icon.url if group.icon? %>
-        <% end %>
-        
+          <% project.groups.each do |group|  %>
+            <%= image_tag group.icon.url if group.icon? %>
+          <% end %>
         </td>
 
         <td class="pjname"><%= link_to "#{project.name}", project %>
-        <p class="date"><%= project.created_at.strftime("%b %d, %Y") %></p>
+          <p class="date"><%= project.created_at.strftime("%b %d, %Y") %></p>
         </td>
-        <td class="hours"><%=int_to_time project.worked_hours%></td>
+        <td class="hours"><%= project.hours %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
 <br>
+
 <div class="bttn">
   <%= button_to 'add new Project', new_project_path, method: :get, class: 'btn btn-primary' %>
   <%= button_to 'back', current_user, method: :get, class: 'btn btn-secondary' %>

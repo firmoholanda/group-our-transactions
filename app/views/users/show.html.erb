@@ -11,8 +11,8 @@
   <div class="app_info col-sm-7 col-12 text-center">
     <div class="list-group">
       <%= link_to 'all my projects', projects_path, class: 'list-group-item list-group-item-action' %>
-      <a href="#" class="list-group-item list-group-item-action">all my external projects</a>
-      <a href="#" class="list-group-item list-group-item-action">all groups</a>
+      <%= link_to 'all my external projects', projects_no_group_path, class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'all groups', groups_path, class: 'list-group-item list-group-item-action' %>
     </div>
   </div>
 
