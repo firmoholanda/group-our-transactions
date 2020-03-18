@@ -1,0 +1,7 @@
+  
+<% provide(:title, "sdd new project") %>
+<% provide(:name, "new Project") %>
+
+<%= render 'projects_form', project: @project %>
+
+<%= button_to 'back', request.referrer, method: :get, class: 'btn btn-secondary' %>

@@ -3,7 +3,7 @@ class Project < ApplicationRecord
   belongs_to :author, class_name: 'User'
 
   has_many :projects_groups
-  has_many :groups, -> { distinct }, through: :groupings
+  has_many :groups, -> { distinct }, through: :projects_groups
   
   validates :name, presence: true
   validates :hours, presence: true
