@@ -1,11 +1,28 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
+<div class="container">
+  <div class="row text-center">
+    <div class="user_info col-md-6 text-center">
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-    </section>
-  </aside>
+    </div>
+    <br>
+    <div class="app_info col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action">
+          <i class="fas fa-project-diagram fa-lg"></i>
+          <%= link_to 'all my Projects', projects_path %>
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <i class="fas fa-unlink fa-lg"></i>
+          <%= link_to 'all my external projects', projects_no_group_path %> 
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <i class="fas fa-layer-group fa-lg"></i>
+          <%= link_to 'all my groups', groups_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

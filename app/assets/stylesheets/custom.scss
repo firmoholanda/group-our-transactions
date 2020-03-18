@@ -67,6 +67,13 @@ p {
   line-height: 1.7em;
 }
 
+/* navbar */
+
+.navbar-inverse, .dropdown-toggle {
+    background-color: #3778c2 !important;
+    border-color: #E7E7E7;
+}
+
 
 /* header */
 
@@ -77,7 +84,7 @@ p {
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 13px;
   font-weight: bold;
   &:hover {
     color: white;
@@ -151,7 +158,6 @@ aside {
 }
 
 .gravatar {
-  float: left;
   margin-right: 10px;
 }
 
@@ -197,9 +203,8 @@ input {
   }
 }
 
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
+.btn-primary {
+    background-color: #3778c2 !important;
 }
 
 /* Users index */

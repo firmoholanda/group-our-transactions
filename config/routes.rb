@@ -15,5 +15,12 @@ Rails.application.routes.draw do
   get     '/login',   to: 'sessions#new'
   post    '/login',   to: 'sessions#create'
   delete  '/logout',  to: 'sessions#destroy'
+  
+  # projects
+  get  '/projects_no_group', to: 'projects#index_projects_no_group'
+  resources :projects
+  
+  # groups
+  resources :groups
 
 end

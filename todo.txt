@@ -16,6 +16,6 @@ db
 user
 project
 group
-project_group
+projects_groups
 
 project_task
