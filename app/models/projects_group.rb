@@ -1,0 +1,2 @@
+class ProjectsGroup < ApplicationRecord
+end
