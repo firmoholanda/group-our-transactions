@@ -1,19 +1,28 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-
-  <div class="user_info col-sm-5 col-12 text-center">
-    <h1>
-      <%= gravatar_for @user %>
-      <%= @user.name %>
-    </h1>
-  </div>
-  <br>
-  <div class="app_info col-sm-7 col-12 text-center">
-    <div class="list-group">
-      <%= link_to 'all my projects', projects_path, class: 'list-group-item list-group-item-action' %>
-      <%= link_to 'all my external projects', projects_no_group_path, class: 'list-group-item list-group-item-action' %>
-      <%= link_to 'all groups', groups_path, class: 'list-group-item list-group-item-action' %>
+<div class="container">
+  <div class="row text-center">
+    <div class="user_info col-md-6 text-center">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </div>
+    <br>
+    <div class="app_info col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action">
+          <i class="fas fa-project-diagram fa-lg"></i>
+          <%= link_to 'all my Projects', projects_path %>
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <i class="fas fa-unlink fa-lg"></i>
+          <%= link_to 'all my external projects', projects_no_group_path %> 
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <i class="fas fa-layer-group fa-lg"></i>
+          <%= link_to 'all my groups', groups_path %>
+        </li>
+      </ul>
     </div>
   </div>
-
 </div>
