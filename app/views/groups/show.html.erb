@@ -16,7 +16,8 @@
   <div class="bttn">
     <%= button_to 'edit', edit_group_path(@group), method: :get, class: 'btn btn-primary' %>
     <%= button_to 'destroy', @group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
-    <%= button_to 'create new Group', new_group_path, method: :get, class: 'btn btn-primary' %>
+    <%= button_to 'create new group', new_group_path, method: :get, class: 'btn btn-primary' %>
+    <%= button_to 'add new project', new_project_path, method: :get, class: 'btn btn-primary' %>
     <%= button_to 'back', groups_path, method: :get, class: 'btn btn-secondary' %>
   </div>
 </div>

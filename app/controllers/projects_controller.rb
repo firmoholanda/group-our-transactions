@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = current_user.projects.joins(:projects_groups).distinct
+    @projects = current_user.projects
   end
 
   def index_projects_no_group
@@ -14,8 +14,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = current_user.projects.build(project_params)
-    @project.groups << Group.find(params[:project][:group_ids]) if params[:project][:group_ids]    
+    @project = current_user.projects.build(project_params)    
 
     if @project.save
       flash.now[:info] = 'project created'
@@ -63,6 +62,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :hours, :author_id, group_ids: [], task_ids: [])
+    params.require(:project).permit(:name, :hours, :author_id, :group_ids)
   end
 end

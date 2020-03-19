@@ -3,7 +3,7 @@
     <tr>
       <th scope="col">icon</th>
       <th scope="col">name</th>
-      <th scope="col">amount</th>
+      <th scope="col">time</th>
       <th scope="col">date</th>
     </tr>
   </thead>
@@ -16,7 +16,7 @@
           <% end %>
         </td>
         <td><%= link_to "#{project.name}", project %></td>
-        <td><%= project.hours %></td>
+        <td><%= project.hours %> hs</td>
         <td><%= project.created_at.strftime("%b %d, %Y").downcase %></td>
       </tr>
   <% end %>
