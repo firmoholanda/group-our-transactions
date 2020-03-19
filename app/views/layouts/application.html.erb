@@ -6,20 +6,18 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-    <section style="width: 100%; min-height: 100vh">
-      <%= render 'layouts/header' %>
-      <div class="container">
-        
-          <% flash.each do |message_type, message| %>
-            <div class="alert alert-info"><%= message %></div>
-          <% end %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-info"><%= message %></div>
+        <% end %>
 
-          <%= yield %>
-          
-          <%= render 'layouts/footer' %>
-          <%= debug(params) if false %>
+        <%= yield %>
         
-      </div>
-    </section>
+        <%= render 'layouts/footer' %>
+        <%= debug(params) if false %>
+      
+    </div>
   </body>
 </html>
