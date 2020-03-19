@@ -1,9 +1,9 @@
 <% provide(:title, "grouped projects") %>
 
-<h1>total hours: <%= current_user.projects.sum(:hours) %> hs</h1>
+<h1>total hours: <%= @projects.sum(:hours) %> hs</h1>
 
 <section class="projects">
-  <%= render partial: "projects_table", locals: { projects: @projects, allow_change: false} %>
+  <%= render partial: "projects_table", locals: { projects: @projects, allow_change: true} %>
 </section>
 
 <div class="bttn">

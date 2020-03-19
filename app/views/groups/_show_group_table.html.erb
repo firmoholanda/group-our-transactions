@@ -2,22 +2,20 @@
   <thead>
     <tr>
       <th scope="col">icon</th>
-      <th scope="col">name</th>
-      <th scope="col">amount</th>
-      <th scope="col">date</th>
+      <th scope="col">project</th>
+      <th scope="col">time</th>
+      <th scope="col">creation</th>
+      <th scope="col">autor</th>
     </tr>
   </thead>
   <tbody>
   <% projects.each do |project| %>
       <tr>
-        <td>
-          <% project.groups.each do |group| %>
-            <%= image_tag group.icon.url if group.icon? %>
-          <% end %>
-        </td>
+        <td>icon</td>
         <td><%= link_to "#{project.name}", project %></td>
-        <td><%= project.hours %></td>
+        <td><%= project.hours %> hs</td>
         <td><%= project.created_at.strftime("%b %d, %Y").downcase %></td>
+        <td><%= User.find_by(id: project.author_id).name %></td>
       </tr>
   <% end %>
   </tbody>

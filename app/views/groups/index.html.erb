@@ -1,21 +1,14 @@
 <% provide(:title, "groups") %>
-<% provide(:name, "groups") %>
 
-<table class="project container">
-  
-  <tbody>
-    <% @groups.each do |group| %>
-      <tr>
-        <td class="icon" ><%= image_tag group.icon.url if group.icon? %></td>
-        <td><%= link_to "#{group.name}", group %></td>
-        <td><%= group.created_at.strftime("%b %d, %Y") %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1>total groups: <%= @groups.size %> </h1>
+
+<section class="groups">
+  <%= render partial: "index_groups_table", locals: { groups: @groups, allow_change: true} %>
+</section>
+
 <br>
 
 <div class="bttn">
-  <%= button_to 'create new Group', new_group_path, method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'add new group', new_group_path, method: :get, class: 'btn btn-primary' %>
   <%= button_to 'back', current_user, method: :get, class: 'btn btn-secondary' %>
-</div>
+<div>

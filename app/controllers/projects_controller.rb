@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   end
 
   def index_projects_no_group
-    @projects = current_user.projects.includes(:projects_groups).where(projects_groups: { group_id: nil })
+    @projects_no_group = current_user.projects.includes(:projects_groups).where(projects_groups: { group_id: nil })
   end
 
   def create
@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
       if params[:project][:group_ids]
         redirect_to projects_path
       else
-        redirect_to second_index_path
+        redirect_to projects_no_group_path
       end
     else
       flash.now[:danger] = 'project update failed.'
