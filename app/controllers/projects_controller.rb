@@ -14,18 +14,17 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = current_user.projects.build(project_params)    
+    @project = current_user.projects.build(project_params)
+    @project.groups << Group.find(params[:project][:group_ids]) if params[:project][:group_ids]
 
     if @project.save
-      flash.now[:info] = 'project created'
       if params[:project][:group_ids]
-        redirect_to projects_path
+        redirect_to projects_path, notice: 'project whith group created'
       else
-        redirect_to projects_no_group_path
+        redirect_to projects_no_group_path, notice: 'project whithout group created'
       end
     else
-      flash.now[:danger] = 'project creation failed.'
-      render 'new'
+      render 'new', danger: 'project creation failed.'
     end
   end
 
@@ -37,22 +36,19 @@ class ProjectsController < ApplicationController
     @project.groups << Group.find(params[:project][:group_ids]) if params[:project][:group_ids]
 
     if @project.update(project_params)
-      flash[:info] = 'project updated!'
       if params[:project][:group_ids]
-        redirect_to projects_path
+        redirect_to projects_path, notice: 'project updated!'
       else
-        redirect_to projects_no_group_path
+        redirect_to projects_no_group_path, notice: 'project updated!'
       end
     else
-      flash.now[:danger] = 'project update failed.'
-      redirect_to 'edit'
+      redirect_to 'edit', danger: 'project update failed.'
     end
   end
 
   def destroy
     @project.destroy
-    flash.now[:info] = 'project deleted'
-    redirect_to projects_path
+    redirect_to projects_path, notice: 'project deleted'
   end
 
   private

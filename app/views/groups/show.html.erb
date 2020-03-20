@@ -1,4 +1,5 @@
 <% provide(:title, @group.name) %>
+<% provide(:navbar_page_title, "group projects") %>
 
 <section class="group_info">
   <h1>
@@ -11,13 +12,12 @@
   <%= render partial: "show_group_table", locals: { projects: @group.projects, allow_change: true} %>
 </section>
 
-  <br>
+<br>
 
-  <div class="bttn">
-    <%= button_to 'edit', edit_group_path(@group), method: :get, class: 'btn btn-primary' %>
-    <%= button_to 'destroy', @group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
-    <%= button_to 'create new group', new_group_path, method: :get, class: 'btn btn-primary' %>
-    <%= button_to 'add new project', new_project_path, method: :get, class: 'btn btn-primary' %>
-    <%= button_to 'back', groups_path, method: :get, class: 'btn btn-secondary' %>
-  </div>
+<div class="bttn">
+  <%= button_to 'edit', edit_group_path(@group), method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'destroy', @group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
+  <%= button_to 'create new group', new_group_path, method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'add new project', new_project_path, method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'back', groups_path, method: :get, class: 'btn btn-secondary' %>
 </div>

@@ -1,4 +1,5 @@
 <% provide(:title, "grouped projects") %>
+<% provide(:navbar_page_title, "all my projects") %>
 
 <h1>total hours: <%= @projects.sum(:hours) %> hs</h1>
 
@@ -7,6 +8,6 @@
 </section>
 
 <div class="bttn">
-  <%= button_to 'add new Project', new_project_path, method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'add new project', new_project_path, method: :get, class: 'btn btn-primary' %>
   <%= button_to 'back', current_user, method: :get, class: 'btn btn-secondary' %>
 <div>

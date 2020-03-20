@@ -22,6 +22,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -72,9 +73,21 @@ p {
 
 /* navbar */
 
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
 .navbar-inverse, .dropdown-toggle {
     background-color: #3778c2 !important;
     border-color: #E7E7E7;
+}
+
+.navbar-page-title {
+  padding-top: 4px;
+  padding-left: 35%;
+
+  font-size: 2em;
+  color: white;
 }
 
 
