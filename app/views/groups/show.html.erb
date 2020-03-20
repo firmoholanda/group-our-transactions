@@ -1,35 +1,23 @@
 <% provide(:title, @group.name) %>
-<div class="row">
-    <section class="group_info">
-      <h1>
-        <span><%= image_tag @group.icon.url if @group.icon? %></span>
-        <%= @group.name %>
-      </h1>
-    </section>
-  <div>
+<% provide(:navbar_page_title, "group projects") %>
 
-    <table class="showcase">
-    <thead>
-      <tr>
-        <th>project</th>
-        <th>author</th>
-      </tr>
-    </thead>
-  
-    <tbody>
-      <% @group.projects.each do |project| %>
-        <tr>
-          <td><%= link_to project.name, project_path(project) %></td>
-          <td><%= User.find_by(id: project.author_id).name%></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  <div class="bttn">
-    <%= button_to 'edit', edit_group_path(@group), method: :get, class: 'btn btn-primary' %>
-    <%= button_to 'destroy', @group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
-    <%= button_to 'create new Group', new_group_path, method: :get, class: 'btn btn-primary' %>
-    <%= button_to 'back', groups_path, method: :get, class: 'btn btn-secondary' %>
-  </div>
+<section class="group_info">
+  <h1>
+    <span><%= image_tag @group.icon.url if @group.icon? %></span>
+    <%= @group.name %>
+  </h1>
+</section>
+
+<section class="group-table">
+  <%= render partial: "show_group_table", locals: { projects: @group.projects, allow_change: true} %>
+</section>
+
+<br>
+
+<div class="bttn">
+  <%= button_to 'edit', edit_group_path(@group), method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'destroy', @group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
+  <%= button_to 'create new group', new_group_path, method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'add new project', new_project_path, method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'back', groups_path, method: :get, class: 'btn btn-secondary' %>
 </div>

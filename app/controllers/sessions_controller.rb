@@ -3,10 +3,10 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    user = User.find_by(email: params[:session][:email])
-    if user
-      log_in user
-      redirect_to user, notice: 'user successfully logged in.'
+    @user = User.find_by(email: params[:session][:email])
+    if @user
+      log_in @user
+      redirect_to @user, notice: 'user successfully logged in.'
     else
       render 'new', danger: 'user not found.'
     end
