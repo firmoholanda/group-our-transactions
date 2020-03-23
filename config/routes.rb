@@ -23,4 +23,7 @@ Rails.application.routes.draw do
   # groups
   resources :groups
 
+  # search
+  get '/search' => 'search#search'
+
 end

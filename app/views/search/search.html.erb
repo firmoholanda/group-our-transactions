@@ -1,0 +1,15 @@
+<%= form_tag(search_path, :method => "get", class: 'navbar-form navbar-left') do %>
+  
+  <div class="input-group">
+    <%= search_field_tag :search, params[:search], placeholder: "search", class: "form-control" %>
+    <div class="input-group-btn">  
+      <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+    </div>  
+  </div>
+
+  <% @results.each do |result| %>
+      <%= result.name %>
+      <br>
+  <% end %>
+
+<% end %>
