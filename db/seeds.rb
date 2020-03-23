@@ -27,7 +27,6 @@ users.each do |user|
     author_id = user.id
     groups.each do |group|
       project[group_ids] = rand(group.id)
-      
     end
 
     Project.create!(name: name, hours: hours, author_id: author_id, group_ids: group_ids)
