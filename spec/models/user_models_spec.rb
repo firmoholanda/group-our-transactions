@@ -1,17 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  before :each do
-    @user = User.create(name: 'example user', email: 'example@example.com')
+  before do
+    @user = described_class.create(name: 'example user', email: 'example@example.com')
   end
 
-  it 'should be valid' do
+  it 'is valid' do
     expect(@user).to be_valid
   end
 
   it 'name should not be spaces' do
     @user.name = '   '
-    expect(@user).to_not be_valid
+    expect(@user).not_to be_valid
   end
 
   it 'email addresses should be unique' do
@@ -23,12 +23,12 @@ RSpec.describe User, type: :model do
 
   context 'association tests' do
     it 'has many projects' do
-      assc = User.reflect_on_association(:projects)
+      assc = described_class.reflect_on_association(:projects)
       expect(assc.macro).to eq :has_many
     end
 
     it 'has many groups' do
-      assc = User.reflect_on_association(:groups)
+      assc = described_class.reflect_on_association(:groups)
       expect(assc.macro).to eq :has_many
     end
   end
