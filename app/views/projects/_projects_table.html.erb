@@ -12,7 +12,7 @@
       <tr>
         <td>
           <% project.groups.each do |group| %>
-            <%= image_tag group.icon.url if group.icon? %>
+            <%= icon(group.icon, class: "fa-lg") %>
           <% end %>
         </td>
         <td><%= link_to "#{project.name}", project %></td>
