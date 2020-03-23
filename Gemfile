@@ -28,6 +28,7 @@ gem 'font-awesome-sass', '~> 4.7.0'
 gem 'bcrypt', '>= 3.1.13'
 gem 'faker', '2.10.2'
 gem 'will_paginate', '3.3.0'
+gem 'rspec-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
