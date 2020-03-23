@@ -3,7 +3,7 @@
 
 <section class="group_info">
   <h1>
-    <span><%= image_tag @group.icon.url if @group.icon? %></span>
+    <%= icon(@group.icon, class: "fa-lg") %>
     <%= @group.name %>
   </h1>
 </section>

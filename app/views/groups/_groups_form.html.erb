@@ -1,8 +1,7 @@
-<%= form_with(model: group, local: true, class: "form-signin") do |form| %>
+<%= form_with(model: group, local: true, class: "form-group") do |form| %>
   <% if group.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
-
       <ul>
       <% group.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,8 +11,15 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name, class: "sr-only" %>
+    <%= form.label :name, class: "" %>
     <%= form.text_field :name, class: "form-control", placeholder: "group name" %>
+  </div>
+
+  <div class="field">
+      <%= form.label :icon, class: "" %>
+      <%= form.select(:icon, options_for_select([ ["&#xf2bc;".html_safe, "address-card-o"],
+                                                  ["&#xf0f9;".html_safe, "ambulance"],
+                                                  ["&#xf17b;".html_safe, "android"]])) %>
   </div>
 
   <br>

@@ -1,9 +1,10 @@
 /* import */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
 
 /* mixins, variables, etc. */
 $primary-color: #8d9db6;
@@ -31,6 +32,10 @@ body {
 
 section {
   overflow: auto;
+}
+
+select {
+  font-family: 'FontAwesome', Verdana;
 }
 
 textarea {
