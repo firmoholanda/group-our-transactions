@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before do
-    @user = described_class.create(name: 'example user', email: 'example@example.com')
+    @user = User.create(name: 'example user', email: 'example@example.com')
   end
 
   it 'is valid' do
@@ -21,14 +21,14 @@ RSpec.describe User, type: :model do
     expect(@user).to be_valid
   end
 
-  context 'association tests' do
+  context 'with association tests' do
     it 'has many projects' do
-      assc = described_class.reflect_on_association(:projects)
+      assc = User.reflect_on_association(:projects)
       expect(assc.macro).to eq :has_many
     end
 
     it 'has many groups' do
-      assc = described_class.reflect_on_association(:groups)
+      assc = User.reflect_on_association(:groups)
       expect(assc.macro).to eq :has_many
     end
   end
