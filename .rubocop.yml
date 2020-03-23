@@ -7,6 +7,14 @@ AllCops:
     - "Rakefile"
     - "README.md"
     - "node_modules/**/*"
+  RSpec:
+    Patterns:
+    - _spec.rb
+    - "(?:^|/)spec/"
+  
+  RSpec/FactoryBot:
+  Patterns:
+  - spec/**/*.rb
 
   DisplayCopNames: true
 
