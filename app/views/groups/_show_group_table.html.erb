@@ -11,7 +11,7 @@
   <tbody>
   <% projects.each do |project| %>
       <tr>
-        <td>icon</td>
+        <td><%= icon(@group.icon, class: "fa-lg") %></td>
         <td><%= link_to "#{project.name}", project %></td>
         <td><%= project.hours %> hs</td>
         <td><%= project.created_at.strftime("%b %d, %Y").downcase %></td>

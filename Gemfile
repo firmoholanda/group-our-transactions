@@ -24,7 +24,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'jquery-rails'
 gem 'bootstrap-sass', '>= 3.4.1'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'bcrypt', '>= 3.1.13'
 gem 'faker', '1.7.3'
 gem 'will_paginate', '3.1.0'

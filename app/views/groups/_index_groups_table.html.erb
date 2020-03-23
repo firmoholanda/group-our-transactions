@@ -10,7 +10,7 @@
   <% groups.each do |group| %>
       <tr>
         <td>
-          <%= image_tag group.icon.url if group.icon? %>
+          <%= icon(group.icon, class: "fa-lg") %>
         </td>
         <td><%= link_to "#{group.name}", group %></td>
         <td><%= group.created_at.strftime("%b %d, %Y").downcase %></td>
