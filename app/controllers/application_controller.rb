@@ -4,11 +4,10 @@ class ApplicationController < ActionController::Base
 
   private
 
-    def logged_in_user
-      unless logged_in?
-        store_location
-        redirect_to login_url, danger: 'please log in.'
-      end
+  def logged_in_user
+    unless logged_in?
+      store_location
+      redirect_to login_url, danger: 'please log in.'
     end
-
+  end
 end

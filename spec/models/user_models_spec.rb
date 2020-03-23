@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   before :each do
     @user = User.create(name: 'example user', email: 'example@example.com')
   end
@@ -33,5 +32,4 @@ RSpec.describe User, type: :model do
       expect(assc.macro).to eq :has_many
     end
   end
-
 end
