@@ -8,7 +8,7 @@
           <%= navbar_page_title(yield(:navbar_page_title)) %>
         </div>
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">          
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= current_user.name %> <b class="caret"></b>
@@ -22,6 +22,9 @@
               <li class="divider"></li>
               <li><%= link_to "log out", logout_path, method: :delete %></li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-lg fa-search" style="color: white"></i></a>
           </li>
         </ul>
       </nav>
