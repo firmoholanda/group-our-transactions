@@ -12,17 +12,17 @@ RSpec.describe Group, type: :model do
 
   context 'with association tests' do
     it 'belongs to creator' do
-      assc = described_class.reflect_on_association(:creator)
+      assc = Group.reflect_on_association(:creator)
       expect(assc.macro).to eq :belongs_to
     end
 
     it 'has many projects_groups' do
-      assc = described_class.reflect_on_association(:projects_groups)
+      assc = Group.reflect_on_association(:projects_groups)
       expect(assc.macro).to eq :has_many
     end
 
     it 'has many projects' do
-      assc = described_class.reflect_on_association(:projects)
+      assc = Group.reflect_on_association(:projects)
       expect(assc.macro).to eq :has_many
     end
   end
