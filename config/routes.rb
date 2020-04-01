@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root 'application#home'
 
   # application
-  get '/home',    to: 'application#home'
-  get '/about',   to: 'application#about'
-  get '/contact',   to: 'application#contact'
+  get     '/home',    to: 'application#home'
+  get     '/about',   to: 'application#about'
+  get   '/contact',   to: 'application#contact'
 
   # users
   get     '/signup',  to: 'users#new'
