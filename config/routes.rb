@@ -19,12 +19,10 @@ Rails.application.routes.draw do
   
   # projects
   get  '/projects_no_group', to: 'projects#index_projects_no_group'
+  get '/search' => 'projects#search'
   resources :projects
   
   # groups
   resources :groups
-
-  # search
-  get '/search' => 'search#search'
 
 end

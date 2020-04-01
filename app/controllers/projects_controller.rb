@@ -51,6 +51,11 @@ class ProjectsController < ApplicationController
     redirect_to projects_path, notice: 'project deleted'
   end
 
+  def search
+    @parameter = params[:search]
+    @results = Project.where('name LIKE ?', "%#{@parameter}%")
+  end
+
   private
 
   def set_project
