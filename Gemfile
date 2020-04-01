@@ -26,7 +26,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '>= 3.4.1'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'bcrypt', '>= 3.1.13'
-gem 'faker', '2.10.2'
+gem 'faker', '2.11.0'
 gem 'will_paginate', '3.3.0'
 gem 'rspec-rails'
 
