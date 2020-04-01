@@ -10,11 +10,6 @@ RSpec.describe Group, type: :model do
     expect(@group).to be_valid
   end
 
-  it 'should not have an empty name' do
-    group = FactoryBot.build(:group, name: '')
-    expect(group).to_not be_valid
-  end
-
   context 'with association tests' do
     it 'belongs to creator' do
       assc = Group.reflect_on_association(:creator)
