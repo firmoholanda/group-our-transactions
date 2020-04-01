@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  
   def new; end
 
   def create
@@ -16,5 +15,4 @@ class SessionsController < ApplicationController
     log_out
     redirect_to root_url
   end
-
 end

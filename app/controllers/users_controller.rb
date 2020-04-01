@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  
+  before_action :logged_in_user, only: %i[index edit update destroy]
+
   def new
     @user = User.new
   end
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       redirect_to @user, notice: 'user successfully created.'
-    else  
+    else
       render :new, danger: 'user was not created.'
     end
   end
@@ -19,15 +19,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  
   private
 
-    def set_user
-      @user = User.find(params[:id])
-    end
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
-    end
-
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
 end
