@@ -1,5 +1,7 @@
 <% provide(:title, "home") %>
 
+<% controller.redirect_to projects_path if logged_in? %>
+
 <div class="container-fluid">
   <h1 class="home-app-name">group our transactions</h1>
 

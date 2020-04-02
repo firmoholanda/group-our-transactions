@@ -14,7 +14,6 @@
 #Group.create!(name: "bday 104", icon: "birthday-cake", user_id: 1)
 #Group.create!(name: "auto 105", icon: "automobile", user_id: 1)
 
-
 # create projects
 groups = Group.take(10)
 users = User.take(5)

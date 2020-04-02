@@ -15,15 +15,15 @@
         <tbody>
           <tr>
             <td><i class="fa fa-calendar-check-o fa-lg"></i></td>
-            <td><%= link_to 'all my projects', projects_path %></td>
+            <td><%= link_to 'all my projects', projects_path, class: "all-my-projects" %></td>
           </tr>
           <tr>
             <td><i class="fa fa-calendar-plus-o fa-lg"></i></td>
-            <td><%= link_to 'all my external projects', projects_no_group_path %></td>
+            <td><%= link_to 'all my external projects', projects_no_group_path, class: "all-my-external-projects" %></td>
           </tr>
           <tr>
             <td><i class="fa fa-group fa-lg"></i></td>
-            <td><%= link_to 'all my groups', groups_path %></td>
+            <td><%= link_to 'all my groups', groups_path, class: "all-my-groups" %></td>
           </tr>
         </tbody>
       </table>    

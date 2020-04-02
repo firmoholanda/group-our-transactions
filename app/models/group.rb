@@ -6,7 +6,4 @@ class Group < ApplicationRecord
 
   before_save { self.name = name.downcase }
   validates :name, presence: true, case_sensitive: false
-  # validates :icon, presence: true
-
-  # default_scope { order(name: :asc) }
 end
