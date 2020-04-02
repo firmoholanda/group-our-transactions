@@ -245,7 +245,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap-sass (>= 3.4.1)
   byebug
-  capybara (>= 2.15)
+  capybara
   coffee-rails (~> 5.0)
   duktape
   faker (= 2.11.0)

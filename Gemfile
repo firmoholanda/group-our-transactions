@@ -27,8 +27,6 @@ gem 'bootstrap-sass', '>= 3.4.1'
 gem 'faker', '2.11.0'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'jquery-rails'
-gem 'rspec-rails'
-gem 'rubocop'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,7 +42,9 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'rspec-rails'
+  gem 'rubocop'
+  gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'rails-controller-testing'
