@@ -35,12 +35,6 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'capybara-webkit'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
-  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -49,6 +43,12 @@ group :development do
 end
 
 group :test do
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '>= 2.15'
+  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
+  gem 'rails-controller-testing'
 end
 
 group :production do
