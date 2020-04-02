@@ -38,6 +38,8 @@ group :development, :test do
   gem 'sqlite3'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+  
+  gem 'rails-controller-testing'
 end
 
 group :development do
