@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Project management tests', type: :feature do
-
   before do
-    @user = User.create(name: 'example user', email: 'example@example.com')  
+    @user = User.create(name: 'example user', email: 'example@example.com')
   end
 
   scenario 'valid creation' do
@@ -13,11 +12,11 @@ RSpec.describe 'Project management tests', type: :feature do
     click_button 'log in'
     sleep(1)
 
-    expect(page).to have_content("my profile")  
+    expect(page).to have_content('my profile')
     find('.all-my-projects').click
     sleep(1)
 
-    expect(page).to have_content("all my projects")
+    expect(page).to have_content('all my projects')
     click_on 'add new project'
     fill_in 'Name', with: 'project01'
     fill_in 'Hours', with: 33
@@ -38,7 +37,7 @@ RSpec.describe 'Project management tests', type: :feature do
     find('.all-my-projects').click
     sleep(1)
 
-    expect(page).to have_content("all my projects")
+    expect(page).to have_content('all my projects')
     click_on 'add new project'
     fill_in 'Name', with: ''
     fill_in 'Hours', with: ''
@@ -47,5 +46,4 @@ RSpec.describe 'Project management tests', type: :feature do
 
     expect(page).to have_content("Name can't be blank")
   end
-
 end

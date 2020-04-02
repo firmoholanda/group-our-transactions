@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Log in tests', type: :feature do
-
   before do
-    @user = User.create(name: 'example user', email: 'example@example.com')  
+    @user = User.create(name: 'example user', email: 'example@example.com')
   end
 
   scenario 'valid login' do
@@ -23,5 +22,4 @@ RSpec.describe 'Log in tests', type: :feature do
     sleep(1)
     expect(page).to_not have_content(@user.name.to_s)
   end
-
 end

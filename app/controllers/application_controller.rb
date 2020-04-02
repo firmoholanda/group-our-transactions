@@ -3,15 +3,14 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def home
-    render "/layouts/home"
+    render '/layouts/home'
   end
 
   def about
-    render "/layouts/about"
+    render '/layouts/about'
   end
 
   def contact
-    render "/layouts/contact"
+    render '/layouts/contact'
   end
-
 end

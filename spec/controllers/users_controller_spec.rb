@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
-  
   before :each do
     @user = User.new(name: 'example user', email: 'example@example.com')
   end
@@ -12,5 +11,4 @@ RSpec.describe UsersController, type: :controller do
       assert_response :success
     end
   end
-
 end

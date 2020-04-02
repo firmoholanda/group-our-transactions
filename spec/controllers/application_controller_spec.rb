@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe ApplicationController, type: :controller do
-  
   it 'should get home' do
     get :home
     expect(response).to render_template('home')
@@ -16,5 +15,4 @@ RSpec.describe ApplicationController, type: :controller do
     get :contact
     expect(response).to render_template('contact')
   end
-
 end

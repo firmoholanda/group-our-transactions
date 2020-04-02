@@ -32,7 +32,6 @@ class ProjectsController < ApplicationController
   def edit; end
 
   def update
-
     if @project.update(project_params)
       if params[:project][:group_ids]
         redirect_to projects_path, notice: 'project updated!'

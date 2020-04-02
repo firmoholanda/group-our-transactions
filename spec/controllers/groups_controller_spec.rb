@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe GroupsController, type: :controller do
-
   before :each do
     @user = User.create(name: 'example user', email: 'example@example.com')
     @group = Group.create!(name: 'computer science 101', icon: 'android', user_id: @user.id)
@@ -20,5 +19,4 @@ RSpec.describe GroupsController, type: :controller do
       assert_response :success
     end
   end
-
 end
