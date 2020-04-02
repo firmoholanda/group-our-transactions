@@ -1,6 +1,8 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'capybara/rspec'
+require 'capybara/rails'
+
 ENV['RAILS_ENV'] ||= 'test'
 
 config.include(Capybara::DSL)
