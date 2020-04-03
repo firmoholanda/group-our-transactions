@@ -25,7 +25,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt', '>= 3.1.13'
 gem 'bootstrap-sass', '>= 3.4.1'
 gem 'faker', '2.11.0'
-gem 'font-awesome-sass', '~> 4.7.0'
+gem 'font-awesome-sass', '~> 5.12.0'
 gem 'jquery-rails'
 
 # Adds support for Capybara system testing and selenium driver
