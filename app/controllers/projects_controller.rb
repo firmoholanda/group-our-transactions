@@ -23,7 +23,7 @@ class ProjectsController < ApplicationController
         redirect_to projects_no_group_path, notice: 'project whithout group created'
       end
     else
-      render 'new', danger: 'project creation failed.'
+      render :new, danger: 'project creation failed.'
     end
   end
 
@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
         redirect_to projects_no_group_path, notice: 'project updated!'
       end
     else
-      redirect_to 'edit', danger: 'project update failed.'
+     render :edit, danger: 'project update failed.'
     end
   end
 
