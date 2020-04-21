@@ -29,8 +29,8 @@ this project can be found in https://github.com/firmoholanda/group-our-transacti
 
 ### ✨ [live version](https://g-o-t-firmoholanda.herokuapp.com/)
 
-<a href="https://group-our-transactions/" target="_blank">
-    <img alt="app image" src="https://github.com/firmoholanda/group-our-transactions/tree/release/app/assets/images/app-animation.gif"/>
+<a href="https://g-o-t-firmoholanda.herokuapp.com/" target="_blank">
+    <img alt="app image" src="https://github.com/firmoholanda/group-our-transactions/blob/release/app/assets/images/app-animation.gif"/>
 </a>
 
 
