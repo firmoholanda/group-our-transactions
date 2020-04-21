@@ -25,3 +25,8 @@ project form select layout
 upload specs test on the controller
 check app deployment
 ask to new review
+
+
+
+# review #3
+- changed validation on projects hours field, now app will not accept strings as hours

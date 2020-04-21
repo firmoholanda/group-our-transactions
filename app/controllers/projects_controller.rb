@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = current_user.projects.build(project_params)
+    @project.groups = Group.find(params[:project][:group_ids]) if params[:project][:group_ids]
 
     if @project.save
       if params[:project][:group_ids]
@@ -23,7 +24,7 @@ class ProjectsController < ApplicationController
         redirect_to projects_no_group_path, notice: 'project whithout group created'
       end
     else
-      render 'new', danger: 'project creation failed.'
+      render :new, danger: 'project creation failed.'
     end
   end
 
@@ -32,6 +33,9 @@ class ProjectsController < ApplicationController
   def edit; end
 
   def update
+    @project.groups = []
+    @project.groups = Group.find(params[:project][:group_ids]) if params[:project][:group_ids]
+
     if @project.update(project_params)
       if params[:project][:group_ids]
         redirect_to projects_path, notice: 'project updated!'
@@ -39,7 +43,7 @@ class ProjectsController < ApplicationController
         redirect_to projects_no_group_path, notice: 'project updated!'
       end
     else
-      redirect_to 'edit', danger: 'project update failed.'
+     render :edit, danger: 'project update failed.'
     end
   end
 
@@ -60,6 +64,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :hours, :author_id, :group_ids)
+    params.require(:project).permit(:name, :hours, :author_id, :group_id)
   end
 end

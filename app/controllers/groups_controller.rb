@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to groups_path, notice: 'group created.'
     else
-      render 'new', danger: 'group creation failed!'
+      render :new, danger: 'group creation failed!'
     end
   end
 
@@ -27,7 +27,7 @@ class GroupsController < ApplicationController
     if @group.update(group_params)
       redirect_to groups_path, notice: 'group updated.'
     else
-      redirect_to 'edit', danger: 'group update failed!'
+      render :edit, danger: 'group update failed!'
     end
   end
 
