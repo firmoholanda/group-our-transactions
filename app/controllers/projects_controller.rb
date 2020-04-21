@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
         redirect_to projects_no_group_path, notice: 'project updated!'
       end
     else
-     render :edit, danger: 'project update failed.'
+      render :edit, danger: 'project update failed.'
     end
   end
 
