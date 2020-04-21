@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = current_user.projects.build(project_params)
+    @project.groups = Group.find(params[:project][:group_ids]) if params[:project][:group_ids]
 
     if @project.save
       if params[:project][:group_ids]
@@ -32,6 +33,9 @@ class ProjectsController < ApplicationController
   def edit; end
 
   def update
+    @project.groups = []
+    @project.groups = Group.find(params[:project][:group_ids]) if params[:project][:group_ids]
+
     if @project.update(project_params)
       if params[:project][:group_ids]
         redirect_to projects_path, notice: 'project updated!'
@@ -60,6 +64,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :hours, :author_id, :group_ids)
+    params.require(:project).permit(:name, :hours, :author_id, :group_id)
   end
 end
