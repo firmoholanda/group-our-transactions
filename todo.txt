@@ -21,11 +21,9 @@ projects_groups
 project form select layout
 
 
-
 upload specs test on the controller
 check app deployment
 ask to new review
-
 
 
 # review #3
