@@ -1,6 +1,6 @@
 # 📃 group-our-transactions
 
-This is a ruby on rails capstone project for Microverse, that groups hours spent on different projects at your university. It was made for anything that you can share with other people and group by some category.
+This is a ruby on rails capstone project for Microverse, that groups hours spent on different projects at your university.
 
 
 
