@@ -58,7 +58,6 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    arel (9.0.0)
     ast (2.4.0)
     autoprefixer-rails (9.7.6)
       execjs
@@ -117,7 +116,9 @@ GEM
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
-    mimemagic (0.3.5)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.1)
@@ -175,7 +176,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
-    rexml (3.2.4)
+    rexml (3.2.5)
     rspec-core (3.9.2)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.2)
@@ -192,14 +193,8 @@ GEM
       rspec-expectations (~> 3.9)
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
-
     rspec-support (3.9.3)
-    rubocop (0.82.0)
-      jaro_winkler (~> 1.5.1)
-
-    rspec-support (3.9.2)
     rubocop (0.84.0)
-
       parallel (~> 1.10)
       parser (>= 2.7.0.1)
       rainbow (>= 2.2.2, < 4.0)
@@ -263,11 +258,10 @@ GEM
       selenium-webdriver (>= 3.0, < 4.0)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
-    zeitwerk (2.3.0)
+    websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    websocket-extensions (0.1.5)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
